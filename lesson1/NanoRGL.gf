@@ -8,11 +8,16 @@ abstract NanoRGL = {
     Det ;
     N ;
     NP ;
+    Adj ;
 
   fun
     this_Det : Det ;
     many_Det : Det ;
+    my_Det : Det ;
+    num5_Det : Det ;
     dog_N : N ;
+    big_Adj : Adj ;
 
-    DetN : Det -> N -> NP ;
+    DetN : Det -> Adj -> N -> NP ;
+    AdjN : Det -> Adj -> N -> NP ;
 }

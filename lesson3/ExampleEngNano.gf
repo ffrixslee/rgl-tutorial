@@ -1,3 +1,5 @@
+--#  -path=../lesson0:../lesson2
+
 concrete ExampleEngNano of Example =
   open
     NanoRGLEng -- concrete syntax of the abstract NanoRGL
