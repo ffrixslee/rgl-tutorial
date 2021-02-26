@@ -11,6 +11,14 @@ resource NanoAPIEng = open NanoRGLEng in {
         in DetN emptyDet n
 
     } ;
+    mkN = overload {
+      
+      noun : Str -> Str -> {s : Number => Str} =
+      \man,men -> {s = table {Sg => man ; Pl => men}} ;
+      
+      regNoun : Str -> {s : Number => Str} =
+      \car -> noun car (car + "s") 
+    } ;
 
     -- Your task: make an overloaded mkN with at least two instances
 }
