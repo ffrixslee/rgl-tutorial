@@ -6,9 +6,9 @@ resource NanoAPIEng = open NanoRGLEng in {
 
       mkNP : Det -> N -> NP = DetN ;
 
-      mkNP : N -> NP = \n ->
-       let emptyDet : Det = lin Det {s = [] ; num = Sg}
-        in DetN emptyDet n 
+      mkNP : N -> Adj -> NP = \n ->
+       let emptyDet : Det = lin Det {s = [] ; num = Sg} , adjectives : Adj = lin {s= []} ;
+        in DetN emptyDet adjectives n
 
     } ;
     mkN = overload {
