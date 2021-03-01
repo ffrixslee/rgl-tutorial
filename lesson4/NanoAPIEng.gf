@@ -8,7 +8,7 @@ resource NanoAPIEng = open NanoRGLEng in {
 
       mkNP : N -> NP = \n ->
        let emptyDet : Det = lin Det {s = [] ; num = Sg}
-        in DetN emptyDet n
+        in DetN emptyDet n 
 
     } ;
     mkN = overload {
